@@ -10,7 +10,14 @@
 Generate custom dat file
 
 ```bash
-strfile -c % motivational-quotes motivational-quotes.dat
+strfile -c % motivate motivate.dat
+```
+
+Copy these files into the default fortune path
+
+```bash
+# on MacOS
+cp motivate{,.dat} /usr/local/Cellar/fortune/9708/share/games/fortunes
 ```
 
 ## Usage
@@ -18,7 +25,7 @@ strfile -c % motivational-quotes motivational-quotes.dat
 Run fortune command with custom quotes
 
 ```bash
-fortune motivational-quotes
+fortune motivate
 ```
 
 Example output
