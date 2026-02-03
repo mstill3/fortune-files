@@ -7,23 +7,25 @@
 
 ## Setup
 
-Generate custom dat file
+### Generate `dat` files
 
 ```bash
-strfile -c % motivate motivate.dat
+bin/generate_dat_files.sh
 ```
 
-Copy these files into the default fortune path
+### Place files in proper location
+
+Copy these files into your machines default fortune file path
 
 ```bash
 # on intel MacOS via brew
-cp motivate{,.dat} /usr/local/Cellar/fortune/9708/share/games/fortunes
+cp files/* /usr/local/Cellar/fortune/9708/share/games/fortunes
 
 # on apple silicon MacOS via brew
-cp motivate{,.dat} /opt/homebrew/Cellar/fortune/9708/share/games/fortunes
+cp files/* /opt/homebrew/Cellar/fortune/9708/share/games/fortunes
 
 # on Linux
-cp motivate{,.dat} /usr/share/games/fortune
+cp files/* /usr/share/games/fortune
 ```
 
 ## Usage
