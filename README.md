@@ -16,9 +16,10 @@ strfile -c % motivate motivate.dat
 Copy these files into the default fortune path
 
 ```bash
-# on MacOS via brew
+# on intel MacOS via brew
 cp motivate{,.dat} /usr/local/Cellar/fortune/9708/share/games/fortunes
-# or
+
+# on apple silicon MacOS via brew
 cp motivate{,.dat} /opt/homebrew/Cellar/fortune/9708/share/games/fortunes
 
 # on Linux
