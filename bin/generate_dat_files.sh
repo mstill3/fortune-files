@@ -6,13 +6,14 @@ script_dir="$(dirname "$(realpath "$0")")"
 parent_dir="$(dirname "$script_dir")"
 files_dir="$parent_dir/files"
 
-pushd "$files_dir"
+# Traverse into files dir
+pushd "$files_dir" || exit 1
+    # Iterate over each element within files dir
     for filename in *; do
-        if [ -f "$filename" ]; then
-            if [[ ! $filename == *.dat ]]; then
-                echo "$filename"
-                strfile -c % "$filename" "$filename".dat
-            fi
+        # Only run logic on files that do NOT end in .dat
+        if [[ -f "$filename" && "$filename" != *.dat ]]; then
+            # Generate the corresponding .dat file
+            strfile -c % "$filename" "$filename".dat
         fi
     done
-popd
+popd || exit 1
